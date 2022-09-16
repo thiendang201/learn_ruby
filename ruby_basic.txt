@@ -1,0 +1,6 @@
+str.gsub("a", "b"):
+str.reverse: đảo dòng, đảo câu, đảo từ
+str.lines: trả về mảng các dòng
+str.downcase: in thường
+str.upcase: in hoa
+str.swapcase: in thường -> hoa, hoa -> thường
