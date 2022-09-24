@@ -1,0 +1,43 @@
+class Human
+  attr_accessor :name, :hair, :height, :weigth, :phone, :email, :age, :nation
+  def initialize(name, phone, age)
+    @name = name
+    @phone = phone
+    @age = age
+  end
+
+  def show()
+    puts "name: #{@name}"
+    # puts "phone: #{@name}"
+    # puts "age: #{@age}"
+  end
+end
+
+class Student < Human
+  attr_accessor :grade1, :grade2, :grade3, :avg
+  def initialize(name, phone, age, grade1, grade2, grade3)
+    super(name, phone, age)
+    @grade1 = grade1
+    @grade2 = grade2
+    @grade3 = grade3
+    @avg = ((grade1 + grade2 + grade3).to_f / 3).round(2)
+  end
+
+  def show()
+    super()
+    puts "Average point: #{@avg}"
+  end
+end
+
+student1 = Student.new('Thien', '0899243351', 21, 9, 6, 7)
+student2 = Student.new('Y', '0899965432', 21, 8, 9, 10)
+student3 = Student.new('Dong', '0899965432', 21, 7, 8, 10)
+student4 = Student.new('Thuan', '0899965432', 21, 7, 9, 8)
+
+studentArr = [student1, student2, student3, student4]
+sortStudentArr = studentArr.sort_by { |student| [student.avg, student.avg] }.reverse
+
+puts "Chua sap xep"
+studentArr.each{ |e| e.show() }
+puts "\nDa sap xep"
+sortStudentArr.each{ |e| e.show() }
