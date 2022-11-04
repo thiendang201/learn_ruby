@@ -1,0 +1,2 @@
+class Sach < ApplicationRecord
+end

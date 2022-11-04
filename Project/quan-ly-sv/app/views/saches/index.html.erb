@@ -1,0 +1,55 @@
+<p style="color: green"><%= notice %></p>
+<div class="d-flex align-items-center justify-content-between">
+    <h2 class="text-warning text-center">QUẢN LÝ CHO HỌC SINH MƯỢN SÁCH</h2>
+    <div class="d-flex align-items-center">
+      <p class="text-primary">Quy định ngày quá hạn</p>
+      <p class="ms-2 p-3 border border-success">3</p>
+    </div>
+  </div>
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>STT</th>
+        <th>Mã HS</th>
+        <th>Họ và tên</th>
+        <th>Lớp</th>
+        <th>Mã sách</th>
+        <th>Tên sách</th>
+        <th>Tên tác giả</th>
+        <th>Tủ sách</th>
+        <th>Số BM</th>
+        <th>Ngày mượn</th>
+        <th>Ngày trả</th>
+        <th>Số ngày</th>
+        <th>Ghi chú</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @saches.each do |sach261| %>
+        <tr>
+          <td><%= sach261.stt %></td>
+          <td><%= sach261.ma_hs %></td>
+          <td><%= sach261.ho_va_ten %></td>
+          <td><%= sach261.lop %></td>
+          <td><%= sach261.ma_sach %></td>
+          <td><%= sach261.ten_sach %></td>
+          <td><%= sach261.ten_tac_gia %></td>
+          <td><%= sach261.tu_sach %></td>
+          <td><%= sach261.so_bm %></td>
+          <td><%= sach261.ngay_muon %></td>
+          <td><%= sach261.ngay_tra %></td>
+          <td><%= sach261.so_ngay %></td>
+          <td><%= sach261.ghi_chu %></td>
+          <td><%= link_to 'Xem', sach261 %> <br>
+          <%= link_to 'Sửa', edit_sach_path(sach261) %>
+          <br>
+          <%= link_to 'Xóa', sach261, :confirm => 'Are you sure?',
+            :method => :delete %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+<%= link_to "Thêm sách", new_sach_path %>

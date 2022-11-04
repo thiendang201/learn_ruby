@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stt: 1
+  ma_hs: MyString
+  ho_va_ten: MyString
+  lop: MyString
+  ma_sach: MyString
+  ten_sach: MyString
+  ten_tac_gia: MyString
+  tu_sach: MyString
+  so_bm: MyString
+  ngay_muon: 2022-11-04
+  ngay_tra: 2022-11-04
+  so_ngay: 1
+  ghi_chu: MyString
+
+two:
+  stt: 1
+  ma_hs: MyString
+  ho_va_ten: MyString
+  lop: MyString
+  ma_sach: MyString
+  ten_sach: MyString
+  ten_tac_gia: MyString
+  tu_sach: MyString
+  so_bm: MyString
+  ngay_muon: 2022-11-04
+  ngay_tra: 2022-11-04
+  so_ngay: 1
+  ghi_chu: MyString
